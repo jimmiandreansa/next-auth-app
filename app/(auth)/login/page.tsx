@@ -1,7 +1,11 @@
 import FormLogin from "@/components/auth/form-login";
 import { GithubButton, GoogleButton } from "@/components/auth/social-button";
 
-const Login = ({ searchParams }: { searchParams?: { error?: string } }) => {
+interface LoginProps {
+  searchParams: { error?: string };
+}
+
+const Login = ({ searchParams }: LoginProps) => {
   const params = searchParams?.error;
 
   return (
@@ -15,7 +19,7 @@ const Login = ({ searchParams }: { searchParams?: { error?: string } }) => {
           role="alert"
         >
           <span className="font-medium">
-            Account already use by other provider.
+            Account already used by another provider.
           </span>
         </div>
       ) : null}
