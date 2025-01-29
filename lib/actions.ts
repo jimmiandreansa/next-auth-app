@@ -40,7 +40,7 @@ export const signUpCredentials = async (
         password: hashedPassword,
       },
     });
-  } catch (error) {
+  } catch {
     return { error: { message: "Failed to register user." } };
   }
 
